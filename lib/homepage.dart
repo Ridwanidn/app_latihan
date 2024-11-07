@@ -1,4 +1,5 @@
 import 'package:app_latihan/input.dart';
+import 'package:app_latihan/page4.dart';
 import 'package:flutter/material.dart';
 import 'package:app_latihan/productdetail.dart';
 
@@ -28,7 +29,7 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 16, color: Colors.black),
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 10),
           Expanded(
             child: GridView.builder(
               padding: const EdgeInsets.all(16),
@@ -56,14 +57,31 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder:(context) {
-            return InputFormPage();
-          },));
-        },
-        backgroundColor: Colors.black,
-        child: Icon(Icons.shopping_cart),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return InputFormPage();
+              }));
+            },
+            backgroundColor: Colors.black,
+            child: Icon(Icons.add),
+            tooltip: 'Formulir',
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return SummaryPage();
+              }));
+            },
+            backgroundColor: Colors.black,
+            child: Icon(Icons.list),
+            tooltip: 'Ringkasan',
+          ),
+        ],
       ),
     );
   }

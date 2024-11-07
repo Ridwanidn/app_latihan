@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class SummaryPage extends StatelessWidget {
   final List<Map<String, String>> users = [
-    {'name': 'John Doe', 'info': 'Mahasiswa Teknik Informatika'},
-    {'name': 'Jane Smith', 'info': 'Desainer Grafis'},
-    {'name': 'Michael Johnson', 'info': 'Data Analyst'},
+    {'name': 'Agus', 'info': 'Mahasiswa Teknik Informatika'},
+    {'name': 'Eko', 'info': 'Desainer Grafis'},
+    {'name': 'puput', 'info': 'Data Analyst'},
     // Tambahkan data contoh lainnya di sini
   ];
 
