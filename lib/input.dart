@@ -54,7 +54,7 @@ class InputFormPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context); // Kembali ke Homepage
                     },
-                    child: Text('Kembali'),
+                    child: Text('Kembali', style: TextStyle(color: Colors.white),),
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
@@ -67,14 +67,7 @@ class InputFormPage extends StatelessWidget {
                         );
                       }
                     },
-                    child: Text('Simpan'),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/summary'); // Ke Halaman Ringkasan
-                    },
-                    child: Text('Lanjut'),
+                    child: Text('Simpan', style: TextStyle(color: Colors.white),),
                   ),
                 ],
               ),
